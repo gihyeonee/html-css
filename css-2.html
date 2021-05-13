@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link
+      rel="shortcut icon"
+      sizes="16*16 32*32 64*64"
+      href="https://nomadcoders.co/m.png"
+    />
+
+    <title>"css 연습용 사이트에양!"</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+
+    <meta charset="utf-8" />
+
+    <style>
+      * {
+        border: 2px solid black;
+      }
+      /* *을 사용하여 전체를 지정하는 코드를 쓸 수 있다. 지금 border(테두리) 지정한 거임 */
+      /* soild는 테두리가 실선으로 표시된다. */
+
+      html {
+        background-color: aqua;
+      }
+
+      body {
+        /* margin: 30px 10px; */
+        /* margin 값을 하나 입력하면 상하좌우에 적용, 2개 입력하면 상하, 좌우에 1개씩 대응 */
+        /* 4개 입력하면 상 우 하 좌 시계방향으로 1개씩 대응 */
+        padding: 20px;
+        /* margin과 반대의 개념. box의 경계로부터 안쪽에 있는 공간. */
+        background-color: lightsteelblue;
+      }
+      div {
+        padding: 20px;
+        border: 2px dashed black;
+        /* border는 테두리임. 테두리! */
+        /* dashed는 점선으로 표시되는 속성이다. */
+      }
+
+      #fidiv {
+        background-color: ghostwhite;
+        height: 150px;
+        width: 150px;
+      }
+      #sediv {
+        background-color: teal;
+        height: 100px;
+        width: 100px;
+      }
+      #thdiv {
+        background-color: wheat;
+        height: 50px;
+        width: 50px;
+      }
+      #fodiv {
+        background-color: blanchedalmond;
+        height: 25px;
+        width: 25px;
+      }
+
+      span {
+        /* display: block; */
+        /* inline속성을 가지는 것을 display를 사용하여 block으로 바꿀 수 있다. 역도 가능함. */
+        background-color: turquoise;
+        color: orange;
+      }
+
+      a {
+        color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="fidiv">
+      <div id="sediv">
+        <div id="thdiv">
+          <div id="fodiv"></div>
+        </div>
+      </div>
+    </div>
+    <!-- 대표적인 box의 형태. 옆에 다른 요소들이 오지 못한다.
+        block의 성질을 갖고 있다.                               -->
+
+    <span>hello1</span>
+    <!-- 옆에 다른 요소들이 올 수 있다. -->
+    <!-- inline(in the same line)의 성질이며, block의 반대이다. -->
+    <span>hello2</span>
+    <span>hello3</span>
+
+    <a href="#" target="_blank"> link </a>
+    <span>hello4</span>
+
+    <!-- <img src="img/space.jpg" /> -->
+    <span>hello5</span>
+    <span>hello6</span>
+  </body>
+</html>
