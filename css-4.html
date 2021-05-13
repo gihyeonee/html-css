@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <title>position fixed를 배워보자.</title>
+    <link
+      rel="shortcut icon"
+      sizes="16*16 32*32 64*64"
+      href="https://nomadcoders.co/m.png"
+    />
+    <style>
+      body {
+        height: 1000vh;
+        background-color: black;
+      }
+
+      div {
+        width: 300px;
+        height: 300px;
+        color: white;
+      }
+      #green {
+        background-color: teal;
+        position: fixed;
+        /* position: fixed를 사용하면, 그 개체를 고정시킴
+        화면을 스크롤해도 최초 위치에 고정되며, top부터의 크기를
+        변경하거나 할 경우에는 새 레이어의 위치에 고정됨. */
+        opacity: 0.2;
+      }
+      #different {
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="green"></div>
+    <div id="different"></div>
+  </body>
+</html>
