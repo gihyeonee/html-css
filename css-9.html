@@ -23,16 +23,17 @@
         padding: 3px 5px;
         border-radius: 5px;
         font-size: 50px;
-        transition: all 2s;
+        transition: all 1s ease-in-out;
         /* transition: background-color 5s ease-in-out, color 4s ease-in-out;
         이렇게도 쓸 수 있다. transition으로 animation 효과를 준다. a가 hover상태일 때
-        transition이 동작한다. */
+        transition이 동작한다.
+        ease-in-out은 transition과 같이 쓰는데 animation 효과가 어떻게 될 지를 정하는 것이다.
+        처음에는 느리게, 보통, 느리게 순으로 끝난다. */
       }
       a:hover {
         background-color: var(--main-letter-color);
         color: var(--sub-background-color);
         border-radius: 25px;
-        font-size: 60px;
       }
     </style>
   </head>
