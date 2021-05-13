@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- html을 작성할 때 첫 줄은 이걸로 스타트임. 무조건. -->
+<html lang="kr">
+  <!-- html 국룰 2번째 시작과 끝에 넣음. -->
+  <!-- lang=""를 사용하여 website의 main language를 알려줌. -->
+
+  <head>
+    <!-- 코드의 'head'(html파일을 설정하는 부분)임을 알림 -->
+
+    <link
+      rel="shortcut icon"
+      sizes="16*16 32*32 64*64"
+      href="https://nomadcoders.co/m.png"
+    />
+    <!-- relationship shortcut icon을 사용하여, website의 작은 아이콘을 설정함. -->
+    <!-- sizes를 사용하여 크기를 설정하고, href로 아이콘에 쓸 파일을 가져 옴. -->
+
+    <title>Home - My first website.</title>
+    <!-- website의 제목을 설정함 -->
+
+    <meta charset="utf-8" />
+    <!-- 특수문자를 넣었을 때 글자가 깨지는 걸 방지하는 태그. 꼭 넣자. -->
+
+    <meta name="description" content="This is my website :D" />
+    <!-- meta : 부가적인 정보를 설정함. 'content'와 'name'중 하나와 연계하여 사용 -->
+    <!-- name="description"을 사용하면 구글에서 검색할 때 이 태그를 찾아서, content의 내용을 user에게 보여줌. -->
+  </head>
+
+  <body>
+    <!-- 코드의 'body'(user가 보는 부분)임을 알림 -->
+
+    <h1>This is my first website</h1>
+    <h3>Let's practice html!</h3>
+    <!-- h는 header의 약자. 제목을 만든다. -->
+
+    <ul>
+      <li>list practice</li>
+    </ul>
+    <!-- unordered list의 약자, 순서가 없는 리스트를 생성한다. -->
+    <!-- list item의 약자, 리스트에 요소를 추가한다. -->
+
+    <ol>
+      <li>num1</li>
+      <li>num2</li>
+    </ol>
+    <!-- ordered list의 약자, 순서가 있는 리스트를 생성한다. -->
+    <!-- li를 사용하여 요소를 추가하면 순서대로 번호가 부여된다. -->
+
+    <form>
+      <div>
+        <label for="이히히">Profile Photo</label>
+        <input id="이히히" type="file" accept=".jpg,.pdf" />
+      </div>
+      <!-- file을 input받는다, accept를 사용해 jpg와 pdf만 받도록 한 상황 -->
+      <!-- label을 클릭하면 file을 입력받는 창을 클릭한 것과 같은 효과를 낼 수도 있다 -->
+      <!-- label 안에 있는 for과 input에 있는 id가 일치해야 하며, 띄어쓰기가 들어가면 안 된다 -->
+      <!-- div는 division의 약자, 구획을 나눈다 -->
+      <!-- <header></header>   <main></main>   <footer></footer> -->
+      <!-- 등을 사용해 구획을 나눌 수도 있다. 가독성을 위하여 div가 아니라 저런 것을 사용하길 권장한다 -->
+
+      <div>
+        <label for="First_Name">First Name</label>
+        <input id="First_Name" required placeholder="Name" type="text" />
+      </div>
+
+      <div>
+        <label for="Last_Name">Last Name</label>
+        <input id="Last_Name" required placeholder="Last Name" type="text" />
+      </div>
+
+      <div>
+        <label for="User_Name">User Name</label>
+        <input id="User_Name" required placeholder="User Name" type="text" />
+      </div>
+
+      <label for="Password">Password</label>
+      <input
+        id="Password"
+        required
+        placeholder="Password min10"
+        minlength="10"
+        type="password"
+      />
+
+      <input value="전부 채웡!" type="submit" />
+
+      <!-- input을 사용해 입력을 받는다 -->
+      <!-- placeholder를 사용해 입력 전에 빈 칸에 보여질 text들을 적어주고 -->
+      <!-- user가 input할 type이 무엇인지 지정해준다(ex: text, password, color, submit 등) -->
+      <!-- disabled를 앞에 넣어주면 기능하지 않는 것을 만들 수도 있음 -->
+      <!-- submit은 버튼을 생성함 value는 그 버튼에 써 있을 글자 -->
+      <!-- required를 사용해 input을 필수로 만들 수도 있다 -->
+
+      <input type="color" />
+      <!-- color를 선택할 수 있는 썸띵이 나옴! -->
+    </form>
+
+    <a href="http://google.com" target="_blank">구글 링크 여깄어영!</a>
+    <!-- 'a'= anchor의 약자, 링크를 만들 때 사용한다. 안에 href와 같이 사용한다. -->
+    <!-- 'href' = hyperlink를 만들 때 a와 같이 사용한다. href= "주소" 를 넣으면 동작한다. -->
+    <!-- target="_blank" 하이퍼링크를 새 창에서 열도록 만든다. a와 같이 사용한다. -->
+
+    <img
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+    />
+    <!-- 'img' = image를 넣을 때 사용한다. self_close인 태그이다. -->
+    <!-- 'src' = source의 약자, img와 같이 사용한다. src= "주소"로 동작시키며, 주소의 이미지 파일을 가져온다. -->
+
+    <img src="img/space.jpg" />
+    <!-- 동일 경로에 있는 이미지 파일을 불러온다. 파일의 이름과 같아야 한다. -->
+    <!-- 경로를 추가해야 할 경우, '폴더 이름/' 으로 들어가서 부른다. -->
+  </body>
+</html>
