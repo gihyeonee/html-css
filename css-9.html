@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transitions에 대해 알아보자.</title>
+    <style>
+      :root {
+        --main-background-color: rgba(180, 180, 180, 0.4);
+        /* rgba는 투명도를 가진 색상이다. rgb값 + opacity(투명도)를 넣는다.
+        0.4면 40퍼센트의 투명도인 것. */
+        --sub-background-color: black;
+        --main-letter-color: gold;
+        --main-margin: 50px;
+      }
+      body {
+        margin: var(--main-margin);
+        background-color: var(--main-background-color);
+      }
+      a {
+        background-color: var(--sub-background-color);
+        color: var(--main-letter-color);
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 50px;
+        transition: all 2s;
+        /* transition: background-color 5s ease-in-out, color 4s ease-in-out;
+        이렇게도 쓸 수 있다. transition으로 animation 효과를 준다. a가 hover상태일 때
+        transition이 동작한다. */
+      }
+      a:hover {
+        background-color: var(--main-letter-color);
+        color: var(--sub-background-color);
+        border-radius: 25px;
+        font-size: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Go home</a>
+  </body>
+</html>
