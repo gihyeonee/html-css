@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <title>States에 대해 알아보자</title>
+    <style>
+      :root {
+        --main-color: gold;
+        --default-margin: 50px;
+      }
+      /* root 안에 변수? 같은 거 집어넣어 놓음.
+      --이름-이름: 변수; 형태로 작성함.
+      호출할 때는, var(--이름-이름); */
+
+      body {
+        height: 1000vh;
+        background-color: whitesmoke;
+      }
+
+      .mg {
+        margin: var(--default-margin);
+      }
+
+      button {
+        background-color: var(--main-color);
+      }
+
+      button:hover {
+        background-color: silver;
+      }
+      /* button에 마우스 커서를 올려놨을 때 */
+
+      button:focus {
+        background-color: darkseagreen;
+      }
+      /* button에 키보드로 인해 커서가 가 있을 때 */
+      button:active {
+        background-color: turquoise;
+      }
+      /* button을 동작할 때 */
+
+      a:visited {
+        color: var(--main-color);
+      }
+      /* 최근에 방문한 적이 있으면(링크) */
+
+      form {
+        border: 5px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      form:focus-within {
+        border-color: saddlebrown;
+      }
+      /* form 안에 있는 자식이 focus 상태일 때 */
+
+      form:hover input:focus {
+        background-color: aquamarine;
+      }
+      /* form이 hover상태고, 자식 중의 input이 focus 상태일 때 */
+
+      input::placeholder {
+        color: dimgray;
+      }
+      /* input 안에 있는 placeholder의 글자 색을 바꿈 */
+
+      p::selection {
+        color: var(--main-color);
+        background-color: black;
+      }
+      /* p가 선택되었을 때 */
+
+      p::first-letter {
+        font-size: 30px;
+      }
+      /* p의 첫 번째 글자를 */
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="mg">
+        <button>누를게!</button>
+        <button>누를겡!</button>
+      </div>
+
+      <div class="mg">
+        <input type="text" placeholder="이이잉 기모링" />
+        <a href="https://apple.com" target="_blank">Go to apple</a>
+      </div>
+    </form>
+
+    <p class="mg">
+      누구보다 빠르게 난 남들과는 다르게 색다르게 리듬을 타는 비트 위의 나그네
+      더 빠르게 빨려 들어가 빠져버리는 네 박자 리듬 위에 나는 매일 비트를 쪼개
+    </p>
+  </body>
+</html>
