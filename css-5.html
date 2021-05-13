@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <title>css inline을 배워보자</title>
+    <link
+      rel="shortcut icon"
+      sizes="16*16 32*32 64*64"
+      href="https://nomadcoders.co/m.png"
+    />
+
+    <style>
+      body {
+        height: 1000vh;
+        /* viewport height의 줄임말, 화면에 보이는 것의 1000퍼센트를 의미함. 반응형임. */
+
+        display: flex;
+        /* div같이 box속성을 갖는 친구들을 수평으로 사용하고 싶다거나 하면,
+        그 부모의 display속성(div가 포함되어 있는 body)을 flex로 바꾼다. */
+
+        /* flex-direction: column; */
+        /* display속성이 flex일 때, 주축과 교차축을 바꿈. */
+
+        flex-wrap: nowrap;
+        /* 화면이 축소되거나 할 때, 기본 div값인 width 300px을 무시하고,
+        한 줄에 담음. wrap으로 바꾸면 300px을 우선적으로 고려해 다음 줄에 담음.*/
+
+        justify-content: space-evenly;
+        /* display가 flex일 때, 주축의 속성을 justify-content로 정의한다. */
+
+        align-items: center;
+        /* display가 flex일 때, 교차축의 속성을 align-items로 정의한다. */
+
+        background-color: white;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        font-size: 28px;
+        color: gray;
+        background-color: cyan;
+      }
+      #d2 {
+        background-color: greenyellow;
+      }
+
+      #d3 {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">num1</div>
+    <div id="d2">num2</div>
+    <div id="d3">num3</div>
+  </body>
+</html>
