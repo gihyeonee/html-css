@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Pseudo Selectors에 대해 알아보자.</title>
+    <meta charset="utf-8" />
+    <style>
+      head {
+        margin: 50px;
+        background-color: white;
+      }
+
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: pink;
+        position: relative;
+      }
+      div:nth-child(odd) {
+        background-color: powderblue;
+      }
+      /* pseudo selector임. n번째 대상을 지정하여, 효과를 줄 수 있음.
+      div:first-child나 div:nth-child(3n+1) 등등을 사용해 쓸 수 있음. */
+
+      span {
+        background-color: black;
+        color: tomato;
+      }
+
+      p span {
+        color: red;
+      }
+      /* p안에 있는 span에 red색깔을 부여해라 */
+
+      div > span {
+        text-decoration: underline;
+      }
+      /* div 의 바로 밑에 있는 자식(직계)에게만 text deco를 부여해라. */
+
+      p + span {
+        padding: 5px;
+        border-radius: 10px;
+      }
+      /* p 바로 다음에 오는 같은 항렬의 span에게 padding을 부여해라. */
+
+      p ~ span {
+        background-color: white;
+      }
+      /* p 다음에 오는 같은 항렬의 span의 background color를 변경해라. */
+
+      input {
+        border: 1px solid tomato;
+      }
+      input:required {
+        border-color: wheat;
+      }
+      /* input인데, required인 것에 효과를 줘라. */
+      input[placeholder~="name"] {
+        background-color: thistle;
+      }
+      /* input인데, placeholder에 name이 포함된 것에 효과를 줘라. */
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>
+      <p>
+        나는 집에 가고 싶다 으아아앙ㅇ 하지만 이미 집이다 으아아아앙
+        <span>inside</span>
+      </p>
+      <span>hello</span>
+      <form>
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+        <input type="password" required placeholder="Password" />
+      </form>
+    </div>
+  </body>
+</html>
