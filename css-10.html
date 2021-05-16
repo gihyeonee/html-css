@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transformations에 대해 알아보자.</title>
+    <style>
+      :root {
+        --rotate-deg: 360deg;
+      }
+
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        transition: transform 3s ease-in-out;
+      }
+
+      img:hover {
+        transform: rotateX(var(--rotate-deg)) rotateY(var(--rotate-deg))
+          rotateZ(var(--rotate-deg));
+      }
+      /* transform으로 3D 효과를 줄 수도 있다. css-9에 나온 것처럼 transition을 사용하여 자연스러운 효과를 준다. */
+    </style>
+  </head>
+  <body>
+    <img src="python-logo.jpg" />
+  </body>
+</html>
